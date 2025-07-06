@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Portfolio</title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <!-- Desktop Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index_1.html">Home</a></li>
+        <li><a href="index_2.html">Education</a></li>
+        <li><a href="index_6.html">Projects</a></li>
+        <li><a href="index_3.html">Skills</a></li>
+        <li><a href="index_4.html">Experience</a></li>
+        <li><a href="index_5.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index_1.html" onclick="closeSidebar()">Home</a></li>
+        <li><a href="index_2.html" onclick="closeSidebar()">Education</a></li>
+        <li><a href="index_6.html" onclick="closeSidebar()">Projects</a></li>
+        <li><a href="index_3.html" onclick="closeSidebar()">Skills</a></li>
+        <li><a href="index_4.html" onclick="closeSidebar()">Experience</a></li>
+        <li><a href="index_5.html" onclick="closeSidebar()">Connect</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<style> /* Desktop Navbar */
+    header {
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    header nav ul li a:hover {
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: cyan;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar nav ul li {
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Responsive - Mobile only */
+    @media (max-width: 768px) {
+      header {
+        display: none;
+      }
+
+      .hamburger,
+      .sidebar {
+        display: block;
+      }
+    }
+  </style></style>
+  <!-- Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+  </script></section><br><br><br><br><br>
+  <h1 class="skillll" id="skillll">Skills</h1>
+ </div>
+</section>
+ <section class="skilled">
+ <div class="container" id="skills">
+  <h2 class="mk" id="pro">Professional Skills:</h2>
+  <div class="skill" id="skilled">
+    <div class="circle" style="--percentage: 80;">
+      <div class="percentage">80%</div>
+    </div>
+    <p>Creativity</p>
+  </div>
+  <div class="skill" id="skilled">
+    <div class="circle"  style="--percentage: 85;">
+      <div class="percentage">85%</div>
+    </div>
+    <p>Communication</p>
+  </div>
+  <div class="skill" id="skilled">
+    <div class="circle"  style="--percentage: 80;">
+      <div class="percentage">80%</div>
+    </div>
+    <p>Problem Solving</p>
+  </div>
+  <div class="skill" id="mainskill" >
+    <div class="circle"  style="--percentage: 90;">
+      <div class="percentage">90%</div>
+    </div>
+    <p>Teamwork</p>
+  </div>
+</div><br><br><br>
+     <h2>Programming Languages:</h2>
+<h1 class="sk"></h1>
+  <section id="gallery">
+    <span><img src="https://jbstechinfo.com/wp-content/uploads/2023/08/JavaScript-Symbol.png" alt="Javascript">JavaScript</span>
+    <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">Python</span>
+    <span><img src="https://beecrowd.com/wp-content/uploads/2024/04/2023-06-01-Java.jpg" alt="Java">Java</span>
+    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt="Html">Html</span>
+    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpXaDo9xQfNOh-0nAtgdMzekEMdTbESQoFhQ&s" alt="Css">Css</span>
+    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyF3gI3ZozPggLgiWvfTOQSMQFTFPrL2MIQ&s" alt="sql">Sql</span>
+    </section>
+     <section>
+  <h1 class="headingss">Tools:</h1>
+  <div class="image-container">
+    <div class="tool">
+      <img src="https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png" alt="Git Logo">
+      <span class="tool-name">Git</span>
+    </div>
+    <div class="tool">
+      <img src="https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg" alt="GitHub Logo">
+      <span class="tool-name">GitHub</span>
+    </div>
+    <div class="tool">
+      <img src="https://external-preview.redd.it/Uz0PH-r8nGx8gU9UCHURirqrtXgLhtqJiNDVgT03jtw.jpg?auto=webp&s=580d0dc62b6581d2a8ff8e628d3bea5d53bdf5d2" alt="VSCode Logo">
+      <span class="tool-name">VS Code</span>
+    </div>
+  </div>
+</section>
+  </style>
+   <h2>Domain:</h2>
+ <div id="image-con">
+  <div class="tool">
+    <img src="https://www.shutterstock.com/image-vector/data-science-vector-icon-260nw-1054542323.jpg" alt="Data Science Icon">
+    <span class="tool-name">Data Science</span>
+  </div>
+  <div class="tool">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/220px-Amazon_Web_Services_Logo.svg.png" alt="AWS Logo">
+    <span class="tool-name">AWS Fundamentals</span>
+  </div>
+  <div class="tool">
+    <img src="https://www.shutterstock.com/image-illustration/aiml-stand-artificial-intelligence-machine-260nw-1574320612.jpg" alt="AI/ML Logo">
+    <span class="tool-name">AI/ML</span>
+  </div>
+</div>
+   <h2>Course Work:</h2>
+  
+<section class="course-section">
+  <div class="course">
+    <img src="https://i.pinimg.com/736x/0b/bc/3c/0bbc3c87fbe12f90087b690abcd8ffcf.jpg" alt="DBMS">
+    <span class="course-name">DBMS</span>
+  </div>
+  <div class="course">
+    <img src="https://www.tutorialspoint.com/java/images/java-oops-concepts.jpg" alt="OOPS Concepts">
+    <span class="course-name">OOPS</span>
+  </div>
+  <div class="course">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDIKEfsWIeyi_XFFGfxjnuPmf4Ew1A8jHgcw&s" alt="Data Structures">
+    <span class="course-name">Data Structures</span>
+  </div>
+  <div class="course">
+    <img src="https://d3s9yd6qcwjotm.cloudfront.net/Content/Publisher/7958/training_material/5381/UQu17T.png" alt="Computer Networks">
+    <span class="course-name">Computer Networks</span>
+  </div>
+  <div class="course">
+    <img src="https://cdn.automationforum.co/uploads/2018/12/operating-sys.png" alt="Operating Systems">
+    <span class="course-name">Operating Systems</span>
+  </div>
+</section>
+<style>body, html {
+    background-color: #0a0a23;
+    color: white;
+  }
+     .skillll{
+      font-size: 200%;
+      color: cyan;
+      text-align: center;
+    }
+.container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+ 
+    .skill {
+      text-align: center;
+    }
+
+    .circle {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background: conic-gradient(cyan calc(var(--percentage) * 1%), #222 calc(var(--percentage) * 1%));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      animation: rotate 1s ease-in-out;
+    }
+
+    .circle:hover {
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .circle::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background-color: #0a0a23;
+      border-radius: 50%;
+    }
+
+    .percentage {
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: cyan;
+    }
+
+    .skill p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #ddd;
+    }
+
+ 
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .h1{
+align-items:top;
+    text-align:top;
+    margin-top:-40%;}
+
+@media (max-width: 480px){
+  #pro{
+    margin-top:6%;
+    display:grid;
+  }
+}
+@media (max-width:320px){
+}
+@media (max-width:768px){
+  .container{
+  #pro{
+margin-top:0%;
+    }
+}}
+   .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 40px;
+            justify-content: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+   @media (max-width: 768px) {
+            .timelines {
+                padding: 20px;
+            }
+
+            .skills {
+                padding: 20px;
+            }
+
+            .headerr {
+                font-size: 2rem;
+            }
+        }
+.skill {
+      text-align: center;
+    }
+.headingss {
+  font-size: 26px;
+}
+#image-con {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.tool {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.tool img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tool:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px cyan, 0 0 25px cyan;
+}
+
+.tool-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 255, 255, 0.8);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tool:hover .tool-name {
+  opacity: 1;
+}
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: cyan;
+  margin-top: 50px;
+}
+
+.course-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.course {
+  position: relative;
+  width: 160px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.course img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px cyan, 0 0 25px cyan;
+}
+
+.course-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 255, 255, 0.8);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.course:hover .course-name {
+  opacity: 1;
+}
+
+ #gallery {
+      position: relative;
+      width: 200px;
+      height: 350px;
+      transform-style: preserve-3d;
+      animation: gallery 20s linear infinite;
+      margin: 0 auto;
+    }
+
+    #gallery span {
+      position: absolute;
+      width: 200px;
+      height: 350px;
+      transform-origin: center;
+      transform-style: preserve-3d;
+    }
+
+    #gallery span img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    #gallery span:nth-child(1) {
+      transform: rotateY(0deg) translateZ(300px);
+    }
+
+    #gallery span:nth-child(2) {
+      transform: rotateY(60deg) translateZ(300px);
+    }
+
+    #gallery span:nth-child(3) {
+      transform: rotateY(120deg) translateZ(300px);
+    }
+
+    #gallery span:nth-child(4) {
+      transform: rotateY(180deg) translateZ(300px);
+    }
+
+    #gallery span:nth-child(5) {
+      transform: rotateY(240deg) translateZ(300px);
+    }
+
+    #gallery span:nth-child(6) {
+      transform: rotateY(300deg) translateZ(300px);
+    }
+
+    @keyframes gallery {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+#gallery:hover img{
+      box-shadow:0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,0 0 200px cyan; 
+}
+.source:hover{
+      box-shadow:0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,0 0 200px cyan; 
+}
+
+
+.tools {
+  text-align: center;
+  font-size: 2.5rem;
+  color: cyan;
+  margin-top: 50px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.tool {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.tool img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tool:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px cyan, 0 0 25px cyan;
+}
+
+.tool-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 255, 255, 0.8);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tool:hover .tool-name {
+  opacity: 1;
+  }</style>

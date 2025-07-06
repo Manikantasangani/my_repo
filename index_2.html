@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slide-in Vertical Sidebar</title>
+  <style>
+    body, html {
+    background-color: #0a0a23;
+    color: white;
+  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+    }
+
+    /* Desktop Navbar */
+    header {
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    header nav ul li a:hover {
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: cyan;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar nav ul li {
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Responsive - Mobile only */
+    @media (max-width: 768px) {
+      header {
+        display: none;
+      }
+
+      .hamburger,
+      .sidebar {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index_1.html">Home</a></li>
+        <li><a href="index_2.html">Education</a></li>
+        <li><a href="index_6.html">Projects</a></li>
+        <li><a href="index_3.html">Skills</a></li>
+        <li><a href="index_4.html">Experience</a></li>
+        <li><a href="index_5.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index_1.html" onclick="closeSidebar()">Home</a></li>
+        <li><a href="index_2.html" onclick="closeSidebar()">Education</a></li>
+        <li><a href="index_6.html" onclick="closeSidebar()">Projects</a></li>
+        <li><a href="index_3.html" onclick="closeSidebar()">Skills</a></li>
+        <li><a href="index_4.html" onclick="closeSidebar()">Experience</a></li>
+        <li><a href="index_5.html" onclick="closeSidebar()">Connect</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+  </script>
+
+</body>
+</html>
+
+   <section id="timeline"><br><br><br><br><br><br>
+    <h1>Education</h1>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-content">
+          <h3><img src="https://play-lh.googleusercontent.com/Xm_9OMA6-QiFDmJvWcfz1xAsYs5YQcWYpJOV0tg3l5GWygLAH34xCna9dyccQ0UhjPeA=s200" class="kms">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High School</h3>
+          <p>I completed my schooling at Kerala Model School, Kamalapur, in 2021. <br> CGPA : 10.0</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" id="time">
+        <div class="timeline-year">2021-2023</div>
+        <div class="timeline-content">
+          <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpvxhTgvwuStS9istLrL7aVQWCBrBWUZstFHvhqnlxHrRvOEz4jgnVq0xZd36xDdlolE&usqp=CAU" class="shivani">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intermediate</h3>
+          <p>My Intermediate is at Shivani Junior College , Bheemaram <br>,Hanamkonda <br>MPC(Maths,Physics,Chemistry) <br>Percentage : 87.0%</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023-2027</div>
+        <div class="timeline-content">
+          <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNZMBmRKF0I-zr2yJP1H_Zrf8w1c0WRlOq1w&s" class="sru">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Graduation </h3>
+          <p> B-Tech in CSE <br>Now I'm currently studying at Sr University,Ananthsagar<br>,Hanamkonda,Warangal</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h3><img src="https://media.licdn.com/dms/image/v2/D560BAQEE7vf9pnD9cw/company-logo_200_200/company-logo_200_200/0/1683358255757?e=2147483647&v=beta&t=IcYSXHT8qh2bfZTZbRG09JYxgr0UwdDC2ODOuraM7w0" class="plasmid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Structured Learning</h3>
+          <p>I've done virtual internship in web-development in plasmid & co.</p>
+        </div>
+      </div>
+    </div>
+     <script>  document.querySelectorAll('.timeline-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.add('blow-up');
+      setTimeout(() => {
+        item.classList.remove('blow-up');
+      }, 300); // match the CSS transition time
+    });
+  });</script>
+     <h1>Achievements</h1>
+     <h3>Atheletics:</h3>
+     <p class="passage">Secured first place in Boost-level athletics competitions, demonstrating strong performance and dedication to sports.</p><br>
+     <h3>Short Film Direction:</h3>
+     <p class="passage">Directed a short film, showcasing creativity, storytelling skills, and leadership in film production.</p><br>
+     <h3>Kho-Kho Sports Participation:</h3>
+     <p class="passage">Actively participated as a team player in an inter-team Kho-Kho competition, demonstrating teamwork, agility, and strategic gameplay.<p><br>
+     <h3>Cultural Activities – Dance Club:</h3>
+     <p class="passage">Actively participated as a member of the Dance Club, contributing to various cultural events and performances.</p>
+     </body>
+  <style>  body, html {
+    background-color: #0a0a23;
+    color: white;
+  }
+
+  @media (max-width: 320px) {
+    .timeline-container {
+      position: absolute;
+      left: 26%;
+    }
+  }
+
+  #timeline {
+    padding: 5% 10%;
+    margin-top: -100px;
+  }
+
+  #timeline h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: cyan;
+  }
+#timeline h3 {
+   
+    color: cyan;
+  }
+
+  .timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+  }
+
+  .timeline-year {
+    background: #111;
+    border: 2px solid cyan;
+    color: cyan;
+    padding: 10px 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-year:hover {
+    transform: scale(1.2) translateY(-50%);
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-year {
+    left: -50px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-year {
+    right: -50px;
+  }
+
+  .timeline-content {
+    background: #111;
+    border: 2px solid cyan;
+    padding: 15px 20px;
+    border-radius: 20px;
+    max-width: 400px;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan;
+  }
+
+  .timeline-content h3 {
+    color: cyan;
+    margin: 0 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 80px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-right: 80px;
+  }
+
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: cyan;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.sru{
+  width:21px;
+  height:21px;
+  border-radius:56%;
+  position:absolute;
+  top:11%;
+}
+.plasmid{
+   width:21px;
+  height:21px;
+  border-radius:56%;
+  position:absolute;
+  
+}
+.kms{
+   width:21px;
+  height:21px;
+  border-radius:90%;
+  position:absolute;
+
+}
+.shivani{
+  width:21px;
+  height:21px;
+  border-radius:56%;
+  position:absolute;
+}
+    .timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.timeline-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+   
+
+
+</style>
+  <script>  document.querySelectorAll('.timeline-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.add('blow-up');
+      setTimeout(() => {
+        item.classList.remove('blow-up');
+      }, 300); // match the CSS transition time
+    });
+  });
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        // Uncomment the line below to animate only once
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+timelineItems.forEach((item, index) => {
+  item.style.transitionDelay = `${index * 0.2}s`;
+  observer.observe(item);
+});
+
+
+</script>

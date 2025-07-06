@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Portfolio</title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <!-- Desktop Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index_1.html">Home</a></li>
+        <li><a href="index_2.html">Education</a></li>
+        <li><a href="index_6.html">Projects</a></li>
+        <li><a href="index_3.html">Skills</a></li>
+        <li><a href="index_4.html">Experience</a></li>
+        <li><a href="index_5.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index_1.html" onclick="closeSidebar()">Home</a></li>
+        <li><a href="index_2.html" onclick="closeSidebar()">Education</a></li>
+        <li><a href="index_6.html" onclick="closeSidebar()">Projects</a></li>
+        <li><a href="index_3.html" onclick="closeSidebar()">Skills</a></li>
+        <li><a href="index_4.html" onclick="closeSidebar()">Experience</a></li>
+        <li><a href="index_5.html" onclick="closeSidebar()">Connect</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<style> /* Desktop Navbar */
+    header {
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    header nav ul li a:hover {
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: cyan;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar nav ul li {
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Responsive - Mobile only */
+    @media (max-width: 768px) {
+      header {
+        display: none;
+      }
+
+      .hamburger,
+      .sidebar {
+        display: block;
+      }
+    }
+  </style></style>
+  <!-- Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+  </script></section><br>
+      <h1>Connect</h1>
+
+
+
+  <style>
+    body, html {
+      font-family: 'Arial', sans-serif;
+      background-color: #0a0a23;
+      color: white;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      text-align: center;
+      color: cyan;
+      margin-top: 80px;
+      font-size: 36px;
+    }
+
+    .contact-form-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+      opacity: 0;
+      transform: translateY(60px);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #ccc;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: white;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: cyan;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 18px;
+      background-color: cyan;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b3b3;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form-section {
+        margin: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-form-section" id="contact">
+    <h1>Contact Me</h1>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="user_email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="user_message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    // Initialize EmailJS with your user ID
+    emailjs.init("ym_61VmmmKoeigoDI");
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = this;
+
+      emailjs.sendForm("service_0rwqzfx", "template_fz5li8q", form)
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset();
+        }, (error) => {
+          alert("❌ Failed to send message. Please try again.");
+          console.error("EmailJS error:", error);
+        });
+    });
+  </script>
+
+</body>
+</html>

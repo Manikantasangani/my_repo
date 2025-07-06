@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MKVarma Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0a0a23;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    header nav ul li a:hover {
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+    }
+
+    main {
+      margin-top: 6rem;
+      text-align: center;
+    }
+
+    .slow-motion {
+      font-size: 2.5rem;
+      color: cyan;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 5vh 5vw;
+      min-height: 90vh;
+      gap: 5vw;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      text-align: center;
+      animation: slideInLeft 1.5s ease-out forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      color: #2196F3;
+    }
+
+    .hero-content h2 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .hero-content h3 {
+      font-size: 1.5rem;
+    }
+
+    .hero-content p {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .resume-btn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+      transform: translateY(-3px);
+    }
+
+    .profile-image {
+      animation: slideInRight 1.5s ease-out forwards;
+      text-align: center;
+    }
+
+    .profile-image img.main-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      background: linear-gradient(45deg, cyan, magenta);
+      padding: 5px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-image img.main-img:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-row {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icon-row a img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .icon-row a img:hover {
+      transform: scale(1.3);
+      box-shadow: 0 0 15px cyan;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-image img.main-img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .icon-row a img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .hero-content h1, .hero-content h2, .hero-content h3 {
+        font-size: 1.2rem;
+      }
+
+      .hero-content p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slow-motion {
+        font-size: 1.8rem;
+      }
+
+      .profile-image img.main-img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .icon-row a img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero-content h1, .hero-content h2, .hero-content h3 {
+        font-size: 1rem;
+      }
+
+      .hero-content p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <nav>
+      <ul>
+        <li><a href="index_1.html">Home</a></li>
+        <li><a href="index_2.html">Education</a></li>
+        <li><a href="index_6.html">Projects</a></li>
+        <li><a href="index_3.html">Skills</a></li>
+        <li><a href="index_4.html">Experience</a></li>
+        <li><a href="index_5.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index_1.html" onclick="closeSidebar()">Home</a></li>
+        <li><a href="index_2.html" onclick="closeSidebar()">Education</a></li>
+        <li><a href="index_6.html" onclick="closeSidebar()">Projects</a></li>
+        <li><a href="index_3.html" onclick="closeSidebar()">Skills</a></li>
+        <li><a href="index_4.html" onclick="closeSidebar()">Experience</a></li>
+        <li><a href="index_5.html" onclick="closeSidebar()">Connect</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<style> /* Desktop Navbar */
+    header {
+      background: #111;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    header nav ul li a:hover {
+      background: cyan;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px 15px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: cyan;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar nav ul li {
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Responsive - Mobile only */
+    @media (max-width: 768px) {
+      header {
+        display: none;
+      }
+
+      .hamburger,
+      .sidebar {
+        display: block;
+      }
+    }
+  </style></style>
+  <!-- Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+  </script>
+      
+
+  <main>
+    <h1 class="slow-motion">MKVARMA's (Sangani Manikanta) <b>Portfolio</b></h1>
+  </main>
+
+  <section class="hero-section">
+    <div class="profile-image">
+      <img class="main-img" src="MK.jpg" alt="Profile" />
+
+      <!-- ICONS BELOW IMAGE -->
+      <div class="icon-row">
+        <a href="https://www.hackerrank.com/profile/varma182869" target="_blank" title="HackerRank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank"/>
+        </a>
+        <a href="https://www.linkedin.com/in/manikanta-sangani-9ab58a289/" target="_blank" title="LinkedIn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/500px-LinkedIn_logo_initials.png" alt="LinkedIn"/>
+        </a>
+        <a href="https://wa.me/919515486671" target="_blank" title="WhatsApp">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0V-w0eR6Ptn9T96pDADf8h7xTDPAPBKa_TA&s" alt="WhatsApp"/>
+        </a>
+        <a href="mailto:manikantasangani38.email@example.com" title="Email">
+          <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Gmail"/>
+        </a>
+        <a href="https://github.com/Manikanta2804" target="_blank" title="GitHub">
+          <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="GitHub"/>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1>Hello, It's Me</h1>
+      <h2>Manikanta Sangani</h2>
+      <h3>And I'm interested in <span id="dynamic-text" color="cyan"></h3>
+        <style>#dynamic-text{
+        color:cyan;</style>
+      </span>
+      <p>
+        I'm a web designer ... Aspiring SDE/Data Scientist Intern | Sophomore in CSE @ SRU | Active Learner | Programming Skills: Java, Python | Problem Solver | Tech Enthusiast | Certified in AWS and Java Basics.
+      </p>
+      <h3>Current CGPA: 8.23</h3>
+      <a href="https://drive.google.com/drive/folders/1stK551sFS8aoOJMZlwDRNc1GK02bdoXO" target="_blank">
+        <button class="resume-btn">Resume</button>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const dynamicText = document.getElementById('dynamic-text');
+    const roles = ['Frontend Developer', 'Web Developer', 'SDE'];
+    let roleIndex = 0;
+    let charIndex = 0;
+
+    function typeEffect() {
+      if (charIndex < roles[roleIndex].length) {
+        dynamicText.textContent += roles[roleIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 120);
+      } else {
+        setTimeout(() => {
+          dynamicText.textContent = '';
+          charIndex = 0;
+          roleIndex = (roleIndex + 1) % roles.length;
+          typeEffect();
+        }, 2000);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', typeEffect);
+  </script>
+
+</body>
+</html>
